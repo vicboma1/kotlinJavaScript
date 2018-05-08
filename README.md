@@ -12,6 +12,6 @@
 
 ### Examples 
 
-* [Hello World Console]()
+* [Hello World Console](https://github.com/vicboma1/kotlinJavaScript/tree/master/01-console)
 
-![hw]()
+![hw](https://raw.githubusercontent.com/vicboma1/kotlinJavaScript/master/assets/01.png)
