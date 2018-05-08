@@ -15,3 +15,8 @@
 * [Hello World Console](https://github.com/vicboma1/kotlinJavaScript/tree/master/01-console)
 
 ![hw](https://raw.githubusercontent.com/vicboma1/kotlinJavaScript/master/assets/01.png)
+
+
+* [Manipulando el DOM desde código](https://github.com/vicboma1/kotlinJavaScript/tree/master/02-manipularDOM)
+
+![hw](https://raw.githubusercontent.com/vicboma1/kotlinJavaScript/master/assets/02.gif)
