@@ -20,3 +20,10 @@
 * [Manipulando el DOM desde código](https://github.com/vicboma1/kotlinJavaScript/tree/master/02-manipularDOM)
 
 ![hw](https://raw.githubusercontent.com/vicboma1/kotlinJavaScript/master/assets/02.gif)
+
+
+
+* [Manipulando el DOM desde código](https://github.com/vicboma1/kotlinJavaScript/tree/master/03-manipulandoWindow)
+
+![hw](https://raw.githubusercontent.com/vicboma1/kotlinJavaScript/master/assets/03.gif)
+
