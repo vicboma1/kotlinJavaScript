@@ -23,7 +23,7 @@
 
 
 
-* [Manipulando el Window desde código](https://github.com/vicboma1/kotlinJavaScript/tree/master/03-manipulandoWindow)
+* [Manipulando el window desde código](https://github.com/vicboma1/kotlinJavaScript/tree/master/03-manipulandoWindow)
 
 ![hw](https://raw.githubusercontent.com/vicboma1/kotlinJavaScript/master/assets/03.gif)
 
