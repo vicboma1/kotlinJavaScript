@@ -22,8 +22,10 @@
 ![hw](https://raw.githubusercontent.com/vicboma1/kotlinJavaScript/master/assets/02.gif)
 
 
-
 * [Manipulando el window desde código](https://github.com/vicboma1/kotlinJavaScript/tree/master/03-manipulandoWindow)
 
 ![hw](https://raw.githubusercontent.com/vicboma1/kotlinJavaScript/master/assets/03.gif)
 
+* [Creando Formulario - Builder DSL](https://github.com/vicboma1/kotlinJavaScript/tree/master/04-builderDSL)
+
+![hw](https://raw.githubusercontent.com/vicboma1/kotlinJavaScript/master/assets/04.gif)
