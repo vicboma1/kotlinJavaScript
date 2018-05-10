@@ -13,11 +13,14 @@ this['05-bootstrapDSL'] = function (_, Kotlin, $module$kotlinx_html_js) {
   var Unit = Kotlin.kotlin.Unit;
   var form = $module$kotlinx_html_js.kotlinx.html.form_3vb3wm$;
   var div = $module$kotlinx_html_js.kotlinx.html.js.div_wkomt5$;
-  var label = $module$kotlinx_html_js.kotlinx.html.label_yd75js$;
-  var set_id = $module$kotlinx_html_js.kotlinx.html.set_id_ueiko3$;
   var InputType = $module$kotlinx_html_js.kotlinx.html.InputType;
   var input = $module$kotlinx_html_js.kotlinx.html.input_e1g74z$;
+  var label = $module$kotlinx_html_js.kotlinx.html.label_yd75js$;
   var div_0 = $module$kotlinx_html_js.kotlinx.html.div_ri36nr$;
+  var textArea = $module$kotlinx_html_js.kotlinx.html.textArea_b1tfd9$;
+  var option = $module$kotlinx_html_js.kotlinx.html.option_xfiiwk$;
+  var select = $module$kotlinx_html_js.kotlinx.html.select_9klr40$;
+  var set_id = $module$kotlinx_html_js.kotlinx.html.set_id_ueiko3$;
   var set_style = $module$kotlinx_html_js.kotlinx.html.set_style_ueiko3$;
   var div_1 = $module$kotlinx_html_js.kotlinx.html.div_59el9d$;
   var ButtonType = $module$kotlinx_html_js.kotlinx.html.ButtonType;
@@ -33,6 +36,9 @@ this['05-bootstrapDSL'] = function (_, Kotlin, $module$kotlinx_html_js) {
     formGroupPass($receiver);
     formGroupRePass($receiver);
     formGroupControlGenre($receiver);
+    formGroupControlCountry($receiver);
+    formControlAddress($receiver);
+    formControlLegal($receiver);
     return Unit;
   }
   function panelBody$lambda($receiver) {
@@ -42,6 +48,102 @@ this['05-bootstrapDSL'] = function (_, Kotlin, $module$kotlinx_html_js) {
   }
   function panelBody() {
     return div(get_create(document), void 0, panelBody$lambda);
+  }
+  function formControlLegal$lambda$lambda$lambda($receiver) {
+    set_classes($receiver, setOf('form-check-input'));
+    $receiver.type = InputType.checkBox;
+    return Unit;
+  }
+  function formControlLegal$lambda$lambda$lambda_0($receiver) {
+    set_classes($receiver, setOf('form-check-label'));
+    $receiver.htmlFor = 'gridCheck';
+    $receiver.unaryPlus_pdl1vz$(' Acepto los t\xE9rminos y condiciones');
+    return Unit;
+  }
+  function formControlLegal$lambda$lambda($receiver) {
+    set_classes($receiver, setOf('form-check'));
+    input($receiver, void 0, void 0, void 0, void 0, void 0, formControlLegal$lambda$lambda$lambda);
+    label($receiver, void 0, formControlLegal$lambda$lambda$lambda_0);
+    return Unit;
+  }
+  function formControlLegal$lambda($receiver) {
+    set_classes($receiver, setOf('form-group form-check'));
+    div_0($receiver, void 0, formControlLegal$lambda$lambda);
+    return Unit;
+  }
+  function formControlLegal($receiver) {
+    div_0($receiver, void 0, formControlLegal$lambda);
+  }
+  function formControlAddress$lambda$lambda($receiver) {
+    set_classes($receiver, setOf('col-sm-2 control-label'));
+    $receiver.htmlFor = 'Address';
+    $receiver.unaryPlus_pdl1vz$('Direcci\xF3n');
+    return Unit;
+  }
+  function formControlAddress$lambda$lambda$lambda($receiver) {
+    set_classes($receiver, setOf('form-control'));
+    $receiver.name = '';
+    $receiver.cols = '';
+    $receiver.rows = '';
+    return Unit;
+  }
+  function formControlAddress$lambda$lambda_0($receiver) {
+    set_classes($receiver, setOf('col-sm-10'));
+    textArea($receiver, void 0, void 0, void 0, void 0, formControlAddress$lambda$lambda$lambda);
+    return Unit;
+  }
+  function formControlAddress$lambda($receiver) {
+    set_classes($receiver, setOf('form-group'));
+    label($receiver, void 0, formControlAddress$lambda$lambda);
+    div_0($receiver, void 0, formControlAddress$lambda$lambda_0);
+    return Unit;
+  }
+  function formControlAddress($receiver) {
+    div_0($receiver, void 0, formControlAddress$lambda);
+  }
+  function formGroupControlCountry$lambda$lambda($receiver) {
+    set_classes($receiver, setOf('col-sm-2 control-label'));
+    $receiver.htmlFor = 'State';
+    $receiver.unaryPlus_pdl1vz$('Pa\xEDs');
+    return Unit;
+  }
+  function formGroupControlCountry$lambda$lambda$lambda$lambda($receiver) {
+    $receiver.unaryPlus_pdl1vz$('Espa\xF1a');
+    return Unit;
+  }
+  function formGroupControlCountry$lambda$lambda$lambda$lambda_0($receiver) {
+    $receiver.unaryPlus_pdl1vz$('Francia');
+    return Unit;
+  }
+  function formGroupControlCountry$lambda$lambda$lambda$lambda_1($receiver) {
+    $receiver.unaryPlus_pdl1vz$('Italia');
+    return Unit;
+  }
+  function formGroupControlCountry$lambda$lambda$lambda$lambda_2($receiver) {
+    $receiver.unaryPlus_pdl1vz$('Otros');
+    return Unit;
+  }
+  function formGroupControlCountry$lambda$lambda$lambda($receiver) {
+    set_classes($receiver, setOf('form-control'));
+    option($receiver, void 0, formGroupControlCountry$lambda$lambda$lambda$lambda);
+    option($receiver, void 0, formGroupControlCountry$lambda$lambda$lambda$lambda_0);
+    option($receiver, void 0, formGroupControlCountry$lambda$lambda$lambda$lambda_1);
+    option($receiver, void 0, formGroupControlCountry$lambda$lambda$lambda$lambda_2);
+    return Unit;
+  }
+  function formGroupControlCountry$lambda$lambda_0($receiver) {
+    set_classes($receiver, setOf('col-sm-10'));
+    select($receiver, void 0, formGroupControlCountry$lambda$lambda$lambda);
+    return Unit;
+  }
+  function formGroupControlCountry$lambda($receiver) {
+    set_classes($receiver, setOf('form-group'));
+    label($receiver, void 0, formGroupControlCountry$lambda$lambda);
+    div_0($receiver, void 0, formGroupControlCountry$lambda$lambda_0);
+    return Unit;
+  }
+  function formGroupControlCountry($receiver) {
+    div_0($receiver, void 0, formGroupControlCountry$lambda);
   }
   function formGroupControlGenre$lambda$lambda($receiver) {
     set_classes($receiver, setOf('col-sm-2 control-label'));
@@ -227,15 +329,6 @@ this['05-bootstrapDSL'] = function (_, Kotlin, $module$kotlinx_html_js) {
   function formGroupName($receiver) {
     div_0($receiver, void 0, formGroupName$lambda);
   }
-  function formControlLegal() {
-    return '';
-  }
-  function formControlAddress() {
-    return '\n            <div class="form-group">\n                <label htmlfor="Address" class="col-sm-2 control-label">Direcci\xF3n<\/label>\n                <div class="col-sm-10">\n                    <textarea name="" cols="" rows="" class="form-control"><\/textarea>\n                <\/div>\n            <\/div>\n        ';
-  }
-  function formGroupControlCountry() {
-    return '\n            <div class="form-group">\n                <label htmlfor="State" class="col-sm-2 control-label">Pa\xEDs<\/label>\n                <div class="col-sm-10">\n                    <select class="form-control">\n                        <option>Espa\xF1a<\/option>\n                        <option>Francia<\/option>\n                        <option>Italia<\/option>\n                        <option>Otros<\/option>\n                    <\/select>\n                <\/div>\n            <\/div>\n        ';
-  }
   function panelFoorter$lambda($receiver) {
     set_classes($receiver, setOf('panel-footer'));
     set_style($receiver, 'overflow:hidden;text-align:right;');
@@ -265,16 +358,9 @@ this['05-bootstrapDSL'] = function (_, Kotlin, $module$kotlinx_html_js) {
     $receiver.unaryPlus_pdl1vz$('Enviar');
     return Unit;
   }
-  function colButton$lambda$lambda_0($receiver) {
-    $receiver.type = ButtonType.submit;
-    set_classes($receiver, setOf('btn btn-default btn-sm'));
-    $receiver.unaryPlus_pdl1vz$('Cancelar');
-    return Unit;
-  }
   function colButton$lambda($receiver) {
     set_classes($receiver, setOf('col-sm-offset-2 col-sm-10'));
     button($receiver, void 0, void 0, void 0, void 0, void 0, colButton$lambda$lambda);
-    button($receiver, void 0, void 0, void 0, void 0, void 0, colButton$lambda$lambda_0);
     return Unit;
   }
   function colButton($receiver) {

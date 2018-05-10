@@ -28,10 +28,5 @@ private fun DIV.colButton() {
             attributes["data-target"] = "#Modal"
             +"Enviar"
         }
-        button {
-            type = ButtonType.submit
-            classes = setOf("btn btn-default btn-sm")
-            +"Cancelar"
-        }
     }
 }

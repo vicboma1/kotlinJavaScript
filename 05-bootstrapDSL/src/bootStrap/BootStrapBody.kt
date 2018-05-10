@@ -16,6 +16,66 @@ fun panelBody() =
                 formGroupPass()
                 formGroupRePass()
                 formGroupControlGenre()
+                formGroupControlCountry()
+                formControlAddress()
+                formControlLegal()
+            }
+        }
+
+
+private fun FORM.formControlLegal() =
+        div {
+            classes= setOf("form-group form-check")
+            div {
+                classes= setOf("form-check")
+                input {
+                    classes= setOf("form-check-input")
+                    type=InputType.checkBox
+                }
+                label {
+                    classes= setOf("form-check-label")
+                    htmlFor="gridCheck"
+                    +" Acepto los términos y condiciones"
+                }
+            }
+        }
+
+private fun FORM.formControlAddress() =
+        div{
+            classes=setOf("form-group")
+            label {
+                classes=setOf("col-sm-2 control-label")
+                htmlFor="Address"
+                +"Dirección"
+            }
+            div {
+                classes = setOf("col-sm-10")
+                textArea {
+                    classes = setOf("form-control")
+                    name=""
+                    cols=""
+                    rows=""
+                }
+            }
+        }
+
+private fun FORM.formGroupControlCountry() =
+        div{
+            classes=setOf("form-group")
+            label {
+                classes=setOf("col-sm-2 control-label")
+                htmlFor="State"
+                +"País"
+            }
+            div {
+                classes = setOf("col-sm-10")
+                select {
+                    classes = setOf("form-control")
+                    option { +"España" }
+                    option { +"Francia" }
+                    option { +"Italia" }
+                    option { +"Otros" }
+                }
             }
         }
 
@@ -151,49 +211,10 @@ private fun FORM.formGroupName() {
 
     }
 }
-/*
-${formGroupControlGenre()}
-${formGroupControlCountry()}
-${formControlAddress()}
-${formControlLegal()}
-*/
-private fun formControlLegal() =
-       ""/*
-        formGroup
-                 """
-                        <div class="col-sm-offset-2 col-sm-10">
-                            <div class="checkbox">
-                                <label> <input type="checkbox"> Acepto los terminos y condiciones</label>
-                            </div>
-                        </div>
-                 """
-        }
 
-*/
-        private fun formControlAddress() =
-                """
-            <div class="form-group">
-                <label htmlfor="Address" class="col-sm-2 control-label">Dirección</label>
-                <div class="col-sm-10">
-                    <textarea name="" cols="" rows="" class="form-control"></textarea>
-                </div>
-            </div>
-        """
 
-            private fun formGroupControlCountry() =
-                    """
-            <div class="form-group">
-                <label htmlfor="State" class="col-sm-2 control-label">País</label>
-                <div class="col-sm-10">
-                    <select class="form-control">
-                        <option>España</option>
-                        <option>Francia</option>
-                        <option>Italia</option>
-                        <option>Otros</option>
-                    </select>
-                </div>
-            </div>
-        """
+
+
 
 
 
