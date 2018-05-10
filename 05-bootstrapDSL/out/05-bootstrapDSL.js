@@ -9,20 +9,98 @@ this['05-bootstrapDSL'] = function (_, Kotlin, $module$kotlinx_html_js) {
   var get_create = $module$kotlinx_html_js.kotlinx.html.dom.get_create_4wc2mh$;
   var setOf = Kotlin.kotlin.collections.setOf_mh5how$;
   var set_classes = $module$kotlinx_html_js.kotlinx.html.set_classes_njy09m$;
-  var set_style = $module$kotlinx_html_js.kotlinx.html.set_style_ueiko3$;
+  var set_role = $module$kotlinx_html_js.kotlinx.html.set_role_ueiko3$;
   var Unit = Kotlin.kotlin.Unit;
-  var div = $module$kotlinx_html_js.kotlinx.html.div_59el9d$;
+  var form = $module$kotlinx_html_js.kotlinx.html.form_3vb3wm$;
+  var div = $module$kotlinx_html_js.kotlinx.html.js.div_wkomt5$;
+  var span = $module$kotlinx_html_js.kotlinx.html.span_6djfml$;
+  var InputType = $module$kotlinx_html_js.kotlinx.html.InputType;
+  var input = $module$kotlinx_html_js.kotlinx.html.input_e1g74z$;
   var div_0 = $module$kotlinx_html_js.kotlinx.html.div_ri36nr$;
+  var label = $module$kotlinx_html_js.kotlinx.html.label_yd75js$;
+  var set_id = $module$kotlinx_html_js.kotlinx.html.set_id_ueiko3$;
+  var set_style = $module$kotlinx_html_js.kotlinx.html.set_style_ueiko3$;
+  var div_1 = $module$kotlinx_html_js.kotlinx.html.div_59el9d$;
   var ButtonType = $module$kotlinx_html_js.kotlinx.html.ButtonType;
   var button = $module$kotlinx_html_js.kotlinx.html.button_i4xb7r$;
-  var span = $module$kotlinx_html_js.kotlinx.html.span_6djfml$;
   var h3 = $module$kotlinx_html_js.kotlinx.html.h3_agelx2$;
-  var div_1 = $module$kotlinx_html_js.kotlinx.html.js.div_wkomt5$;
-  var set_id = $module$kotlinx_html_js.kotlinx.html.set_id_ueiko3$;
-  var set_role = $module$kotlinx_html_js.kotlinx.html.set_role_ueiko3$;
   var h5 = $module$kotlinx_html_js.kotlinx.html.h5_aplb7s$;
+  function panelBody$lambda$lambda($receiver) {
+    set_classes($receiver, setOf('form-horizontal'));
+    set_role($receiver, 'form');
+    formGroupName($receiver);
+    formGroupEmail($receiver);
+    return Unit;
+  }
+  function panelBody$lambda($receiver) {
+    set_classes($receiver, setOf('panel-body'));
+    form($receiver, void 0, void 0, void 0, void 0, panelBody$lambda$lambda);
+    return Unit;
+  }
   function panelBody() {
-    return '\n' + '            <div class=' + '"' + 'panel-body' + '"' + '>' + '\n' + '                <form class=' + '"' + 'form-horizontal' + '"' + ' role=' + '"' + 'form' + '"' + '>' + '\n' + '                    ' + formGroupName() + '\n' + '                    ' + formGroupEmail() + '\n' + '                    ' + formGroupPass() + '\n' + '                    ' + formGroupRePass() + '\n' + '                    ' + formGroupControlGenre() + '\n' + '                    ' + formGroupControlCountry() + '\n' + '                    ' + formControlAddress() + '\n' + '                    ' + formControlLegal() + '\n' + '                <\/form>' + '\n' + '            <\/div>' + '\n' + '        ';
+    return div(get_create(document), void 0, panelBody$lambda);
+  }
+  function formGroupEmail$lambda$lambda$lambda$lambda$lambda($receiver) {
+    set_classes($receiver, setOf('input-group-addon'));
+    $receiver.unaryPlus_pdl1vz$('@');
+    return Unit;
+  }
+  function formGroupEmail$lambda$lambda$lambda$lambda$lambda_0($receiver) {
+    set_classes($receiver, setOf('form-control'));
+    $receiver.type = InputType.text;
+    return Unit;
+  }
+  function formGroupEmail$lambda$lambda$lambda$lambda($receiver) {
+    set_classes($receiver, setOf('input-group input-group-sm'));
+    span($receiver, void 0, formGroupEmail$lambda$lambda$lambda$lambda$lambda);
+    input($receiver, void 0, void 0, void 0, void 0, void 0, formGroupEmail$lambda$lambda$lambda$lambda$lambda_0);
+    return Unit;
+  }
+  function formGroupEmail$lambda$lambda$lambda($receiver) {
+    set_classes($receiver, setOf('col-sm-10'));
+    div_0($receiver, void 0, formGroupEmail$lambda$lambda$lambda$lambda);
+    return Unit;
+  }
+  function formGroupEmail$lambda$lambda($receiver) {
+    set_classes($receiver, setOf('col-sm-2 control-label'));
+    $receiver.htmlFor = 'gmail';
+    $receiver.unaryPlus_pdl1vz$('Gmail ');
+    div_0($receiver, void 0, formGroupEmail$lambda$lambda$lambda);
+    return Unit;
+  }
+  function formGroupEmail$lambda($receiver) {
+    set_classes($receiver, setOf('form-group'));
+    label($receiver, void 0, formGroupEmail$lambda$lambda);
+    return Unit;
+  }
+  function formGroupEmail($receiver) {
+    div_0($receiver, void 0, formGroupEmail$lambda);
+  }
+  function formGroupName$lambda$lambda$lambda$lambda($receiver) {
+    set_classes($receiver, setOf('form-control'));
+    $receiver.type = InputType.email;
+    set_id($receiver, '_email');
+    return Unit;
+  }
+  function formGroupName$lambda$lambda$lambda($receiver) {
+    set_classes($receiver, setOf('col-sm-10'));
+    input($receiver, void 0, void 0, void 0, void 0, void 0, formGroupName$lambda$lambda$lambda$lambda);
+    return Unit;
+  }
+  function formGroupName$lambda$lambda($receiver) {
+    set_classes($receiver, setOf('col-sm-2 control-label'));
+    $receiver.htmlFor = 'name';
+    $receiver.unaryPlus_pdl1vz$('Nombre ');
+    div_0($receiver, void 0, formGroupName$lambda$lambda$lambda);
+    return Unit;
+  }
+  function formGroupName$lambda($receiver) {
+    set_classes($receiver, setOf('panel-body'));
+    label($receiver, void 0, formGroupName$lambda$lambda);
+    return Unit;
+  }
+  function formGroupName($receiver) {
+    div_0($receiver, void 0, formGroupName$lambda);
   }
   function formControlLegal() {
     return '';
@@ -42,12 +120,6 @@ this['05-bootstrapDSL'] = function (_, Kotlin, $module$kotlinx_html_js) {
   function formGroupPass() {
     return '\n            <div class="form-group">\n            <label htmlfor="password" class="col-sm-2 control-label">Password<\/label>\n            <div class="col-sm-10">\n                <input type="password" class="form-control" id="pass">\n            <\/div>\n            <\/div>\n        ';
   }
-  function formGroupEmail() {
-    return '\n            <div class="form-group">\n                <label htmlfor="gmail" class="col-sm-2 control-label">Gmail<\/label>\n                <div class="col-sm-10">\n                    <div class="input-group input-group-sm">\n                        <span class="input-group-addon">@<\/span>\n                        <input type="text" class="form-control" placeholder="">\n                    <\/div>\n                <\/div>\n            <\/div>\n        ';
-  }
-  function formGroupName() {
-    return '\n             <div class="form-group">\n                <label htmlfor="name" class="col-sm-2 control-label">Nombre <\/label>\n                <div class="col-sm-10">\n                    <input type="email" class="form-control" id="_email">\n                <\/div>\n             <\/div>\n        ';
-  }
   function panelFoorter$lambda($receiver) {
     set_classes($receiver, setOf('panel-footer'));
     set_style($receiver, 'overflow:hidden;text-align:right;');
@@ -55,7 +127,7 @@ this['05-bootstrapDSL'] = function (_, Kotlin, $module$kotlinx_html_js) {
     return Unit;
   }
   function panelFoorter() {
-    return div(get_create(document), void 0, panelFoorter$lambda);
+    return div_1(get_create(document), void 0, panelFoorter$lambda);
   }
   function buttonGroup$lambda($receiver) {
     set_classes($receiver, setOf('form-group'));
@@ -107,20 +179,7 @@ this['05-bootstrapDSL'] = function (_, Kotlin, $module$kotlinx_html_js) {
     return Unit;
   }
   function panelHeader() {
-    return div_1(get_create(document), void 0, panelHeader$lambda);
-  }
-  function showDialog$lambda$lambda$lambda($receiver) {
-    set_classes($receiver, setOf('modal-content'));
-    headerModal($receiver);
-    bodyModal($receiver);
-    footerModal($receiver);
-    return Unit;
-  }
-  function showDialog$lambda$lambda($receiver) {
-    set_classes($receiver, setOf('modal-dialog'));
-    set_role($receiver, 'document');
-    div_0($receiver, void 0, showDialog$lambda$lambda$lambda);
-    return Unit;
+    return div(get_create(document), void 0, panelHeader$lambda);
   }
   function showDialog$lambda($receiver) {
     set_classes($receiver, setOf('modal fade'));
@@ -136,11 +195,30 @@ this['05-bootstrapDSL'] = function (_, Kotlin, $module$kotlinx_html_js) {
     var $receiver_2 = $receiver.attributes;
     var key_1 = 'aria-hidden';
     $receiver_2.put_xwzc9p$(key_1, 'true');
-    div_0($receiver, void 0, showDialog$lambda$lambda);
+    dialogModal($receiver);
     return Unit;
   }
   function showDialog() {
-    return div_1(get_create(document), void 0, showDialog$lambda);
+    return div(get_create(document), void 0, showDialog$lambda);
+  }
+  function dialogModal$lambda($receiver) {
+    set_classes($receiver, setOf('modal-dialog'));
+    set_role($receiver, 'document');
+    containerModal($receiver);
+    return Unit;
+  }
+  function dialogModal($receiver) {
+    div_0($receiver, void 0, dialogModal$lambda);
+  }
+  function containerModal$lambda($receiver) {
+    set_classes($receiver, setOf('modal-content'));
+    headerModal($receiver);
+    bodyModal($receiver);
+    footerModal($receiver);
+    return Unit;
+  }
+  function containerModal($receiver) {
+    div_0($receiver, void 0, containerModal$lambda);
   }
   function headerModal$lambda$lambda($receiver) {
     set_classes($receiver, setOf('modal-title'));
@@ -216,16 +294,16 @@ this['05-bootstrapDSL'] = function (_, Kotlin, $module$kotlinx_html_js) {
     div_0($receiver, void 0, footerModal$lambda);
   }
   function main(args) {
-    injectHtml('\n' + '         ' + panelBody());
+    injectHtml();
   }
-  function injectHtml(innerHtml, panel) {
+  function injectHtml(panel) {
     if (panel === void 0)
       panel = 'panel';
     var tmp$;
     var tmp$_0;
     if ((tmp$ = document.getElementById(panel)) != null) {
       tmp$.appendChild(panelHeader());
-      tmp$.innerHTML = innerHtml;
+      tmp$.appendChild(panelBody());
       tmp$.appendChild(panelFoorter());
       tmp$.appendChild(showDialog());
       tmp$_0 = tmp$;

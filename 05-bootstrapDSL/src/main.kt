@@ -9,17 +9,14 @@ import kotlin.browser.document
  * Created by vicboma on 08/05/2018.
  */
 fun main(args: Array<String>) {
-    injectHtml(
-        """
-         ${panelBody()}"""
-    )
+    injectHtml()
 }
 
-private fun injectHtml(innerHtml: String, panel:String = "panel") =
+private fun injectHtml(panel:String = "panel") =
         document.getElementById(panel)
                ?.apply {
                    appendChild(panelHeader())
-                   innerHTML = innerHtml
+                   appendChild(panelBody())
                    appendChild(panelFoorter())
                    appendChild(showDialog())
                }

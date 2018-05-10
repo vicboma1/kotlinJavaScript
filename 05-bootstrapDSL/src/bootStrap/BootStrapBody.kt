@@ -1,21 +1,72 @@
 package bootStrap
 
-fun panelBody() =
-        """
-            <div class="panel-body">
-                <form class="form-horizontal" role="form">
-                    ${formGroupName()}
-                    ${formGroupEmail()}
-                    ${formGroupPass()}
-                    ${formGroupRePass()}
-                    ${formGroupControlGenre()}
-                    ${formGroupControlCountry()}
-                    ${formControlAddress()}
-                    ${formControlLegal()}
-                </form>
-            </div>
-        """
+import kotlinx.html.*
+import kotlinx.html.dom.create
+import kotlinx.html.js.div
+import kotlin.browser.document
 
+fun panelBody() =
+        document.create.div {
+            classes=setOf("panel-body")
+            form {
+                classes=setOf("form-horizontal")
+                role="form"
+                formGroupName()
+                formGroupEmail()
+            }
+        }
+
+private fun FORM.formGroupEmail() {
+    div {
+        classes = setOf("form-group")
+        label {
+            classes = setOf("col-sm-2 control-label")
+            htmlFor = "gmail"
+            +"Gmail "
+            div {
+                classes = setOf("col-sm-10")
+                div {
+                    classes = setOf("input-group input-group-sm")
+                    span{
+                        classes = setOf("input-group-addon")
+                        +"@"
+                    }
+                    input {
+                        classes = setOf("form-control")
+                        type = InputType.text
+                    }
+                }
+            }
+        }
+    }
+}
+
+private fun FORM.formGroupName() {
+    div {
+        classes = setOf("panel-body")
+        label {
+            classes = setOf("col-sm-2 control-label")
+            htmlFor = "name"
+            +"Nombre "
+            div {
+                classes = setOf("col-sm-10")
+                input {
+                    classes = setOf("form-control")
+                    type = InputType.email
+                    id = "_email"
+                }
+            }
+        }
+    }
+}
+/*
+${formGroupPass()}
+${formGroupRePass()}
+${formGroupControlGenre()}
+${formGroupControlCountry()}
+${formControlAddress()}
+${formControlLegal()}
+*/
 private fun formControlLegal() =
        ""/*
         formGroup
@@ -89,27 +140,9 @@ private fun formControlLegal() =
             </div>
         """
 
-            private fun formGroupEmail() =
-                    """
-            <div class="form-group">
-                <label htmlfor="gmail" class="col-sm-2 control-label">Gmail</label>
-                <div class="col-sm-10">
-                    <div class="input-group input-group-sm">
-                        <span class="input-group-addon">@</span>
-                        <input type="text" class="form-control" placeholder="">
-                    </div>
-                </div>
-            </div>
-        """
 
 
-            private fun formGroupName() =
-                    """
-             <div class="form-group">
-                <label htmlfor="name" class="col-sm-2 control-label">Nombre </label>
-                <div class="col-sm-10">
-                    <input type="email" class="form-control" id="_email">
-                </div>
-             </div>
-        """
+
+
+
 
