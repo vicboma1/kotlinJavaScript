@@ -17,19 +17,19 @@
 ![hw](https://raw.githubusercontent.com/vicboma1/kotlinJavaScript/master/assets/01.png)
 
 
-* [Manipulando el DOM desde código](https://github.com/vicboma1/kotlinJavaScript/tree/master/02-manipularDOM)
+#### [Manipulando el DOM desde código](https://github.com/vicboma1/kotlinJavaScript/tree/master/02-manipularDOM)
 
 ![hw](https://raw.githubusercontent.com/vicboma1/kotlinJavaScript/master/assets/02.gif)
 
 
-* [Manipulando el window desde código](https://github.com/vicboma1/kotlinJavaScript/tree/master/03-manipulandoWindow)
+#### [Manipulando el window desde código](https://github.com/vicboma1/kotlinJavaScript/tree/master/03-manipulandoWindow)
 
 ![hw](https://raw.githubusercontent.com/vicboma1/kotlinJavaScript/master/assets/03.gif)
 
-* [Creando Formulario - Builder DSL](https://github.com/vicboma1/kotlinJavaScript/tree/master/04-builderDSL)
+#### [Creando Formulario - Builder DSL](https://github.com/vicboma1/kotlinJavaScript/tree/master/04-builderDSL)
 
 ![hw](https://raw.githubusercontent.com/vicboma1/kotlinJavaScript/master/assets/_04.gif)
 
-* [Formulario Bootstrap - Builder DSL](https://github.com/vicboma1/kotlinJavaScript/tree/master/05-bootstrapDSL)
+#### [Formulario Bootstrap - Builder DSL](https://github.com/vicboma1/kotlinJavaScript/tree/master/05-bootstrapDSL)
 
 ![hw](https://raw.githubusercontent.com/vicboma1/kotlinJavaScript/master/assets/05.png)
