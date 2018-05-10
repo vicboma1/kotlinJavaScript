@@ -15,8 +15,55 @@ fun panelBody() =
                 formGroupEmail()
                 formGroupPass()
                 formGroupRePass()
+                formGroupControlGenre()
             }
         }
+
+private fun FORM.formGroupControlGenre() =
+        div {
+            classes = setOf("form-group")
+            label {
+                classes = setOf("col-sm-2 control-label")
+                htmlFor = "genero"
+                +"Género"
+            }
+            div {
+                classes = setOf("col-sm-10")
+                div {
+                    classes = setOf("radio-inline")
+                    div {
+                        classes=setOf("form-check form-check-inline")
+                        input {
+                            classes=setOf("form-check-input")
+                            id = "radiobutton1"
+                            name = "sampleradiobutton"
+                            value = ""
+                            type = InputType.radio
+                        }
+                        label {
+                            classes=setOf("form-check-label")
+                            +"Masculino  "
+                        }
+                    }
+
+                    div {
+                        classes=setOf("form-check form-check-inline")
+                        input {
+                            classes=setOf("form-check-input")
+                            id = "radiobutton2"
+                            name = "sampleradiobutton"
+                            value = ""
+                            type = InputType.radio
+                        }
+                        label {
+                            classes=setOf("form-check-label")
+                            +"Femenino  "
+                        }
+                    }
+                }
+            }
+        }
+
 
 private fun FORM.formGroupRePass() =
         div{
@@ -105,7 +152,6 @@ private fun FORM.formGroupName() {
     }
 }
 /*
-${formGroupRePass()}
 ${formGroupControlGenre()}
 ${formGroupControlCountry()}
 ${formControlAddress()}
@@ -149,30 +195,7 @@ private fun formControlLegal() =
             </div>
         """
 
-            private fun formGroupControlGenre() =
-                    """
-             <div class="form-group">
-                <label class="col-sm-2 control-label">Género</label>
-                <div class="col-sm-10">
-                    <div class="radio-inline">
-                        <label> <input id="radiobutton1" name="sampleradiobutton" value="" type="radio">Masculino</label>
-                    </div>
-                    <div class="radio-inline">
-                        <label> <input id="radiobutton2" name="sampleradiobutton" value="" type="radio">Femenino</label>
-                    </div>
-                </div>
-            </div>
-        """
 
-            private fun formGroupRePass() =
-                    """
-            <div class="form-group">
-                <label htmlfor="password" class="col-sm-2 control-label">Confirmar password</label>
-                <div class="col-sm-10">
-                    <input type="password" class="form-control" id="confirmpass">
-                </div>
-            </div>
-        """
 
 
 

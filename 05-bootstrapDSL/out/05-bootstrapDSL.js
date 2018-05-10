@@ -14,15 +14,14 @@ this['05-bootstrapDSL'] = function (_, Kotlin, $module$kotlinx_html_js) {
   var form = $module$kotlinx_html_js.kotlinx.html.form_3vb3wm$;
   var div = $module$kotlinx_html_js.kotlinx.html.js.div_wkomt5$;
   var label = $module$kotlinx_html_js.kotlinx.html.label_yd75js$;
-  var InputType = $module$kotlinx_html_js.kotlinx.html.InputType;
   var set_id = $module$kotlinx_html_js.kotlinx.html.set_id_ueiko3$;
+  var InputType = $module$kotlinx_html_js.kotlinx.html.InputType;
   var input = $module$kotlinx_html_js.kotlinx.html.input_e1g74z$;
   var div_0 = $module$kotlinx_html_js.kotlinx.html.div_ri36nr$;
   var set_style = $module$kotlinx_html_js.kotlinx.html.set_style_ueiko3$;
   var div_1 = $module$kotlinx_html_js.kotlinx.html.div_59el9d$;
   var ButtonType = $module$kotlinx_html_js.kotlinx.html.ButtonType;
   var button = $module$kotlinx_html_js.kotlinx.html.button_i4xb7r$;
-  var p = $module$kotlinx_html_js.kotlinx.html.p_8pggrc$;
   var h3 = $module$kotlinx_html_js.kotlinx.html.h3_agelx2$;
   var h5 = $module$kotlinx_html_js.kotlinx.html.h5_aplb7s$;
   var span = $module$kotlinx_html_js.kotlinx.html.span_6djfml$;
@@ -33,6 +32,7 @@ this['05-bootstrapDSL'] = function (_, Kotlin, $module$kotlinx_html_js) {
     formGroupEmail($receiver);
     formGroupPass($receiver);
     formGroupRePass($receiver);
+    formGroupControlGenre($receiver);
     return Unit;
   }
   function panelBody$lambda($receiver) {
@@ -42,6 +42,70 @@ this['05-bootstrapDSL'] = function (_, Kotlin, $module$kotlinx_html_js) {
   }
   function panelBody() {
     return div(get_create(document), void 0, panelBody$lambda);
+  }
+  function formGroupControlGenre$lambda$lambda($receiver) {
+    set_classes($receiver, setOf('col-sm-2 control-label'));
+    $receiver.htmlFor = 'genero';
+    $receiver.unaryPlus_pdl1vz$('G\xE9nero');
+    return Unit;
+  }
+  function formGroupControlGenre$lambda$lambda$lambda$lambda$lambda($receiver) {
+    set_classes($receiver, setOf('form-check-input'));
+    set_id($receiver, 'radiobutton1');
+    $receiver.name = 'sampleradiobutton';
+    $receiver.value = '';
+    $receiver.type = InputType.radio;
+    return Unit;
+  }
+  function formGroupControlGenre$lambda$lambda$lambda$lambda$lambda_0($receiver) {
+    set_classes($receiver, setOf('form-check-label'));
+    $receiver.unaryPlus_pdl1vz$('Masculino  ');
+    return Unit;
+  }
+  function formGroupControlGenre$lambda$lambda$lambda$lambda($receiver) {
+    set_classes($receiver, setOf('form-check form-check-inline'));
+    input($receiver, void 0, void 0, void 0, void 0, void 0, formGroupControlGenre$lambda$lambda$lambda$lambda$lambda);
+    label($receiver, void 0, formGroupControlGenre$lambda$lambda$lambda$lambda$lambda_0);
+    return Unit;
+  }
+  function formGroupControlGenre$lambda$lambda$lambda$lambda$lambda_1($receiver) {
+    set_classes($receiver, setOf('form-check-input'));
+    set_id($receiver, 'radiobutton2');
+    $receiver.name = 'sampleradiobutton';
+    $receiver.value = '';
+    $receiver.type = InputType.radio;
+    return Unit;
+  }
+  function formGroupControlGenre$lambda$lambda$lambda$lambda$lambda_2($receiver) {
+    set_classes($receiver, setOf('form-check-label'));
+    $receiver.unaryPlus_pdl1vz$('Femenino  ');
+    return Unit;
+  }
+  function formGroupControlGenre$lambda$lambda$lambda$lambda_0($receiver) {
+    set_classes($receiver, setOf('form-check form-check-inline'));
+    input($receiver, void 0, void 0, void 0, void 0, void 0, formGroupControlGenre$lambda$lambda$lambda$lambda$lambda_1);
+    label($receiver, void 0, formGroupControlGenre$lambda$lambda$lambda$lambda$lambda_2);
+    return Unit;
+  }
+  function formGroupControlGenre$lambda$lambda$lambda($receiver) {
+    set_classes($receiver, setOf('radio-inline'));
+    div_0($receiver, void 0, formGroupControlGenre$lambda$lambda$lambda$lambda);
+    div_0($receiver, void 0, formGroupControlGenre$lambda$lambda$lambda$lambda_0);
+    return Unit;
+  }
+  function formGroupControlGenre$lambda$lambda_0($receiver) {
+    set_classes($receiver, setOf('col-sm-10'));
+    div_0($receiver, void 0, formGroupControlGenre$lambda$lambda$lambda);
+    return Unit;
+  }
+  function formGroupControlGenre$lambda($receiver) {
+    set_classes($receiver, setOf('form-group'));
+    label($receiver, void 0, formGroupControlGenre$lambda$lambda);
+    div_0($receiver, void 0, formGroupControlGenre$lambda$lambda_0);
+    return Unit;
+  }
+  function formGroupControlGenre($receiver) {
+    div_0($receiver, void 0, formGroupControlGenre$lambda);
   }
   function formGroupRePass$lambda$lambda($receiver) {
     set_classes($receiver, setOf('col-sm-2 control-label'));
@@ -172,12 +236,6 @@ this['05-bootstrapDSL'] = function (_, Kotlin, $module$kotlinx_html_js) {
   function formGroupControlCountry() {
     return '\n            <div class="form-group">\n                <label htmlfor="State" class="col-sm-2 control-label">Pa\xEDs<\/label>\n                <div class="col-sm-10">\n                    <select class="form-control">\n                        <option>Espa\xF1a<\/option>\n                        <option>Francia<\/option>\n                        <option>Italia<\/option>\n                        <option>Otros<\/option>\n                    <\/select>\n                <\/div>\n            <\/div>\n        ';
   }
-  function formGroupControlGenre() {
-    return '\n             <div class="form-group">\n                <label class="col-sm-2 control-label">G\xE9nero<\/label>\n                <div class="col-sm-10">\n                    <div class="radio-inline">\n                        <label> <input id="radiobutton1" name="sampleradiobutton" value="" type="radio">Masculino<\/label>\n                    <\/div>\n                    <div class="radio-inline">\n                        <label> <input id="radiobutton2" name="sampleradiobutton" value="" type="radio">Femenino<\/label>\n                    <\/div>\n                <\/div>\n            <\/div>\n        ';
-  }
-  function formGroupRePass_0() {
-    return '\n            <div class="form-group">\n                <label htmlfor="password" class="col-sm-2 control-label">Confirmar password<\/label>\n                <div class="col-sm-10">\n                    <input type="password" class="form-control" id="confirmpass">\n                <\/div>\n            <\/div>\n        ';
-  }
   function panelFoorter$lambda($receiver) {
     set_classes($receiver, setOf('panel-footer'));
     set_style($receiver, 'overflow:hidden;text-align:right;');
@@ -208,9 +266,6 @@ this['05-bootstrapDSL'] = function (_, Kotlin, $module$kotlinx_html_js) {
     return Unit;
   }
   function colButton$lambda$lambda_0($receiver) {
-    return Unit;
-  }
-  function colButton$lambda$lambda_1($receiver) {
     $receiver.type = ButtonType.submit;
     set_classes($receiver, setOf('btn btn-default btn-sm'));
     $receiver.unaryPlus_pdl1vz$('Cancelar');
@@ -219,8 +274,7 @@ this['05-bootstrapDSL'] = function (_, Kotlin, $module$kotlinx_html_js) {
   function colButton$lambda($receiver) {
     set_classes($receiver, setOf('col-sm-offset-2 col-sm-10'));
     button($receiver, void 0, void 0, void 0, void 0, void 0, colButton$lambda$lambda);
-    p($receiver, void 0, colButton$lambda$lambda_0);
-    button($receiver, void 0, void 0, void 0, void 0, void 0, colButton$lambda$lambda_1);
+    button($receiver, void 0, void 0, void 0, void 0, void 0, colButton$lambda$lambda_0);
     return Unit;
   }
   function colButton($receiver) {
