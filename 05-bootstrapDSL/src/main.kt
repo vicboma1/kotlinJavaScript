@@ -1,3 +1,4 @@
+
 import bootStrap.panelBody
 import bootStrap.panelFoorter
 import bootStrap.panelHeader
@@ -10,18 +11,15 @@ import kotlin.browser.document
 fun main(args: Array<String>) {
     injectHtml(
         """
-         ${panelHeader()}
-         ${panelBody()}
-//         ${panelFoorter()}
-         ${showDialog()}
-        """
+         ${panelBody()}"""
     )
-
-
 }
 
 private fun injectHtml(innerHtml: String, panel:String = "panel") =
         document.getElementById(panel)
                ?.apply {
-                    innerHTML = innerHtml
+                   appendChild(panelHeader())
+                   innerHTML = innerHtml
+                   appendChild(panelFoorter())
+                   appendChild(showDialog())
                }

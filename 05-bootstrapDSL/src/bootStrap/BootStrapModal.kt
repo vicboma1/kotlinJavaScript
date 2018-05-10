@@ -1,49 +1,86 @@
 package bootStrap
 
+import kotlinx.html.*
+import kotlinx.html.dom.create
+import kotlinx.html.js.div
+import kotlin.browser.document
+
 fun showDialog() =
-        """
-         <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                ${content()}
-            </div>
-        </div>
-    """
+        document.create.div {
+            classes= setOf("modal fade")
+            id="Modal"
+            attributes["tabindex"] ="-1"
+            role ="dialog"
+            attributes["aria-labelledby"] ="exampleModalLabel"
+            attributes["aria-hidden"]="true"
+            dialogModal()
+        }
 
-private fun content() =
-        """
-            <div class="modal-content">
-                ${header()}
-                ${body()}
-                ${footer()}
-            </div>
-        """
+private fun DIV.dialogModal() {
+    div {
+        classes = setOf("modal-dialog")
+        role = "document"
+        containerModal()
+    }
+}
 
-private fun footer() =
-        """
-             <div class="modal-footer">
-                ${button("btn btn-secondary","Cerrar")}
-                ${button("btn btn-primary","Aceptar")}
-            </div>
-        """
+private fun DIV.containerModal() {
+    div {
+        classes = setOf("modal-content")
+        headerModal()
+        bodyModal()
+        footerModal()
+    }
+}
 
-private fun button(_class:String, title:String ) = """<button type="button" class="${_class}" data-dismiss="modal">${title}</button>"""
+private fun DIV.headerModal() {
+    div {
+        classes = setOf("modal-header")
+        h5 {
+            classes = setOf("modal-title")
+            id = "exampleModalLabel"
+            +"Solicitud realizada con éxito"
+        }
+        button {
+            type = ButtonType.button
+            classes = setOf("close")
+            attributes["data-dismiss"] = "modal"
+            attributes["aria-label"] = "Close"
+            span {
+                attributes["aria-hidden"] = "true"
+                +"&amp;times"
+            }
+        }
+    }
+}
 
-private fun body() =
-    """
-        <div class="modal-body">
-            Su formulario se ha rellenado correctamente"
-        </div>
-    """
+private fun DIV.bodyModal() {
+    div {
+        classes = setOf("modal-body")
+        +"Su formulario se ha rellenado correctamente "
+    }
+}
 
-private fun header() =
-        """
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Solicitud realizada con éxito</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-        """
+private fun DIV.footerModal() {
+    div {
+        classes = setOf("modal-footer")
+        button {
+            type = ButtonType.button
+            classes = setOf("btn btn-secondary")
+            attributes["data-dismiss"] = "modal"
+            +"Aceptar"
+        }
+        span { }
+        button {
+            type = ButtonType.button
+            classes = setOf("btn btn-primary")
+            attributes["data-dismiss"] = "modal"
+            +"Cancelar"
+        }
+    }
+}
+
+
 
 
 

@@ -9,11 +9,18 @@ this['05-bootstrapDSL'] = function (_, Kotlin, $module$kotlinx_html_js) {
   var get_create = $module$kotlinx_html_js.kotlinx.html.dom.get_create_4wc2mh$;
   var setOf = Kotlin.kotlin.collections.setOf_mh5how$;
   var set_classes = $module$kotlinx_html_js.kotlinx.html.set_classes_njy09m$;
+  var set_style = $module$kotlinx_html_js.kotlinx.html.set_style_ueiko3$;
   var Unit = Kotlin.kotlin.Unit;
-  var style = $module$kotlinx_html_js.kotlinx.html.style_st6e4p$;
   var div = $module$kotlinx_html_js.kotlinx.html.div_59el9d$;
+  var div_0 = $module$kotlinx_html_js.kotlinx.html.div_ri36nr$;
   var ButtonType = $module$kotlinx_html_js.kotlinx.html.ButtonType;
   var button = $module$kotlinx_html_js.kotlinx.html.button_i4xb7r$;
+  var span = $module$kotlinx_html_js.kotlinx.html.span_6djfml$;
+  var h3 = $module$kotlinx_html_js.kotlinx.html.h3_agelx2$;
+  var div_1 = $module$kotlinx_html_js.kotlinx.html.js.div_wkomt5$;
+  var set_id = $module$kotlinx_html_js.kotlinx.html.set_id_ueiko3$;
+  var set_role = $module$kotlinx_html_js.kotlinx.html.set_role_ueiko3$;
+  var h5 = $module$kotlinx_html_js.kotlinx.html.h5_aplb7s$;
   function panelBody() {
     return '\n' + '            <div class=' + '"' + 'panel-body' + '"' + '>' + '\n' + '                <form class=' + '"' + 'form-horizontal' + '"' + ' role=' + '"' + 'form' + '"' + '>' + '\n' + '                    ' + formGroupName() + '\n' + '                    ' + formGroupEmail() + '\n' + '                    ' + formGroupPass() + '\n' + '                    ' + formGroupRePass() + '\n' + '                    ' + formGroupControlGenre() + '\n' + '                    ' + formGroupControlCountry() + '\n' + '                    ' + formControlAddress() + '\n' + '                    ' + formControlLegal() + '\n' + '                <\/form>' + '\n' + '            <\/div>' + '\n' + '        ';
   }
@@ -41,14 +48,10 @@ this['05-bootstrapDSL'] = function (_, Kotlin, $module$kotlinx_html_js) {
   function formGroupName() {
     return '\n             <div class="form-group">\n                <label htmlfor="name" class="col-sm-2 control-label">Nombre <\/label>\n                <div class="col-sm-10">\n                    <input type="email" class="form-control" id="_email">\n                <\/div>\n             <\/div>\n        ';
   }
-  function panelFoorter$lambda$lambda($receiver) {
-    $receiver.unaryPlus_pdl1vz$('overflow:hidden;text-align:right;');
-    return Unit;
-  }
   function panelFoorter$lambda($receiver) {
     set_classes($receiver, setOf('panel-footer'));
-    buttonGroup();
-    style($receiver, void 0, panelFoorter$lambda$lambda);
+    set_style($receiver, 'overflow:hidden;text-align:right;');
+    buttonGroup($receiver);
     return Unit;
   }
   function panelFoorter() {
@@ -56,11 +59,11 @@ this['05-bootstrapDSL'] = function (_, Kotlin, $module$kotlinx_html_js) {
   }
   function buttonGroup$lambda($receiver) {
     set_classes($receiver, setOf('form-group'));
-    colButton();
+    colButton($receiver);
     return Unit;
   }
-  function buttonGroup() {
-    return div(get_create(document), void 0, buttonGroup$lambda);
+  function buttonGroup($receiver) {
+    div_0($receiver, void 0, buttonGroup$lambda);
   }
   function colButton$lambda$lambda($receiver) {
     $receiver.type = ButtonType.submit;
@@ -71,47 +74,149 @@ this['05-bootstrapDSL'] = function (_, Kotlin, $module$kotlinx_html_js) {
     var $receiver_1 = $receiver.attributes;
     var key_0 = 'data-target';
     $receiver_1.put_xwzc9p$(key_0, '#Modal');
-    $receiver.unaryPlus_pdl1vz$('Enviar*****');
+    $receiver.unaryPlus_pdl1vz$('Enviar');
     return Unit;
   }
   function colButton$lambda$lambda_0($receiver) {
+    return Unit;
+  }
+  function colButton$lambda$lambda_1($receiver) {
     $receiver.type = ButtonType.submit;
-    set_classes($receiver, setOf('btn btn-success btn-sm'));
-    $receiver.unaryPlus_pdl1vz$('Cancelar*****');
+    set_classes($receiver, setOf('btn btn-default btn-sm'));
+    $receiver.unaryPlus_pdl1vz$('Cancelar');
     return Unit;
   }
   function colButton$lambda($receiver) {
     set_classes($receiver, setOf('col-sm-offset-2 col-sm-10'));
     button($receiver, void 0, void 0, void 0, void 0, void 0, colButton$lambda$lambda);
-    button($receiver, void 0, void 0, void 0, void 0, void 0, colButton$lambda$lambda_0);
+    span($receiver, void 0, colButton$lambda$lambda_0);
+    button($receiver, void 0, void 0, void 0, void 0, void 0, colButton$lambda$lambda_1);
     return Unit;
   }
-  function colButton() {
-    return div(get_create(document), void 0, colButton$lambda);
+  function colButton($receiver) {
+    div_0($receiver, void 0, colButton$lambda);
+  }
+  function panelHeader$lambda$lambda($receiver) {
+    set_classes($receiver, setOf('panel-title text-center'));
+    $receiver.unaryPlus_pdl1vz$('Formulario');
+    return Unit;
+  }
+  function panelHeader$lambda($receiver) {
+    set_classes($receiver, setOf('panel-heading'));
+    h3($receiver, void 0, panelHeader$lambda$lambda);
+    return Unit;
   }
   function panelHeader() {
-    return '\n            <div class="panel-heading">\n                <h3 class="panel-title text-center">Formulario<\/h3>\n            <\/div>\n        ';
+    return div_1(get_create(document), void 0, panelHeader$lambda);
+  }
+  function showDialog$lambda$lambda$lambda($receiver) {
+    set_classes($receiver, setOf('modal-content'));
+    headerModal($receiver);
+    bodyModal($receiver);
+    footerModal($receiver);
+    return Unit;
+  }
+  function showDialog$lambda$lambda($receiver) {
+    set_classes($receiver, setOf('modal-dialog'));
+    set_role($receiver, 'document');
+    div_0($receiver, void 0, showDialog$lambda$lambda$lambda);
+    return Unit;
+  }
+  function showDialog$lambda($receiver) {
+    set_classes($receiver, setOf('modal fade'));
+    set_id($receiver, 'Modal');
+    var $receiver_0 = $receiver.attributes;
+    var key = 'tabindex';
+    $receiver_0.put_xwzc9p$(key, '-1');
+    set_role($receiver, 'dialog');
+    var $receiver_1 = $receiver.attributes;
+    var key_0 = 'aria-labelledby';
+    var value = 'exampleModalLabel';
+    $receiver_1.put_xwzc9p$(key_0, value);
+    var $receiver_2 = $receiver.attributes;
+    var key_1 = 'aria-hidden';
+    $receiver_2.put_xwzc9p$(key_1, 'true');
+    div_0($receiver, void 0, showDialog$lambda$lambda);
+    return Unit;
   }
   function showDialog() {
-    return '\n' + '         <div class=' + '"' + 'modal fade' + '"' + ' id=' + '"' + 'Modal' + '"' + ' tabindex=' + '"' + '-1' + '"' + ' role=' + '"' + 'dialog' + '"' + ' aria-labelledby=' + '"' + 'exampleModalLabel' + '"' + ' aria-hidden=' + '"' + 'true' + '"' + '>' + '\n' + '            <div class=' + '"' + 'modal-dialog' + '"' + ' role=' + '"' + 'document' + '"' + '>' + '\n' + '                ' + content() + '\n' + '            <\/div>' + '\n' + '        <\/div>' + '\n' + '    ';
+    return div_1(get_create(document), void 0, showDialog$lambda);
   }
-  function content() {
-    return '\n' + '            <div class=' + '"' + 'modal-content' + '"' + '>' + '\n' + '                ' + header() + '\n' + '                ' + body() + '\n' + '                ' + footer() + '\n' + '            <\/div>' + '\n' + '        ';
+  function headerModal$lambda$lambda($receiver) {
+    set_classes($receiver, setOf('modal-title'));
+    set_id($receiver, 'exampleModalLabel');
+    $receiver.unaryPlus_pdl1vz$('Solicitud realizada con \xE9xito');
+    return Unit;
   }
-  function footer() {
-    return '\n' + '             <div class=' + '"' + 'modal-footer' + '"' + '>' + '\n' + '                ' + button_0('btn btn-secondary', 'Cerrar') + '\n' + '                ' + button_0('btn btn-primary', 'Aceptar') + '\n' + '            <\/div>' + '\n' + '        ';
+  function headerModal$lambda$lambda$lambda($receiver) {
+    var $receiver_0 = $receiver.attributes;
+    var key = 'aria-hidden';
+    $receiver_0.put_xwzc9p$(key, 'true');
+    $receiver.unaryPlus_pdl1vz$('&amp;times');
+    return Unit;
   }
-  function button_0(_class, title) {
-    return '<button type=' + '"' + 'button' + '"' + ' class=' + '"' + _class + '"' + ' data-dismiss=' + '"' + 'modal' + '"' + '>' + title + '<\/button>';
+  function headerModal$lambda$lambda_0($receiver) {
+    $receiver.type = ButtonType.button;
+    set_classes($receiver, setOf('close'));
+    var $receiver_0 = $receiver.attributes;
+    var key = 'data-dismiss';
+    $receiver_0.put_xwzc9p$(key, 'modal');
+    var $receiver_1 = $receiver.attributes;
+    var key_0 = 'aria-label';
+    $receiver_1.put_xwzc9p$(key_0, 'Close');
+    span($receiver, void 0, headerModal$lambda$lambda$lambda);
+    return Unit;
   }
-  function body() {
-    return '\n        <div class="modal-body">\n            Su formulario se ha rellenado correctamente"\n        <\/div>\n    ';
+  function headerModal$lambda($receiver) {
+    set_classes($receiver, setOf('modal-header'));
+    h5($receiver, void 0, headerModal$lambda$lambda);
+    button($receiver, void 0, void 0, void 0, void 0, void 0, headerModal$lambda$lambda_0);
+    return Unit;
   }
-  function header() {
-    return '\n            <div class="modal-header">\n                <h5 class="modal-title" id="exampleModalLabel">Solicitud realizada con \xE9xito<\/h5>\n                <button type="button" class="close" data-dismiss="modal" aria-label="Close">\n                    <span aria-hidden="true">&times;<\/span>\n                <\/button>\n            <\/div>\n        ';
+  function headerModal($receiver) {
+    div_0($receiver, void 0, headerModal$lambda);
+  }
+  function bodyModal$lambda($receiver) {
+    set_classes($receiver, setOf('modal-body'));
+    $receiver.unaryPlus_pdl1vz$('Su formulario se ha rellenado correctamente ');
+    return Unit;
+  }
+  function bodyModal($receiver) {
+    div_0($receiver, void 0, bodyModal$lambda);
+  }
+  function footerModal$lambda$lambda($receiver) {
+    $receiver.type = ButtonType.button;
+    set_classes($receiver, setOf('btn btn-secondary'));
+    var $receiver_0 = $receiver.attributes;
+    var key = 'data-dismiss';
+    $receiver_0.put_xwzc9p$(key, 'modal');
+    $receiver.unaryPlus_pdl1vz$('Aceptar');
+    return Unit;
+  }
+  function footerModal$lambda$lambda_0($receiver) {
+    return Unit;
+  }
+  function footerModal$lambda$lambda_1($receiver) {
+    $receiver.type = ButtonType.button;
+    set_classes($receiver, setOf('btn btn-primary'));
+    var $receiver_0 = $receiver.attributes;
+    var key = 'data-dismiss';
+    $receiver_0.put_xwzc9p$(key, 'modal');
+    $receiver.unaryPlus_pdl1vz$('Cancelar');
+    return Unit;
+  }
+  function footerModal$lambda($receiver) {
+    set_classes($receiver, setOf('modal-footer'));
+    button($receiver, void 0, void 0, void 0, void 0, void 0, footerModal$lambda$lambda);
+    span($receiver, void 0, footerModal$lambda$lambda_0);
+    button($receiver, void 0, void 0, void 0, void 0, void 0, footerModal$lambda$lambda_1);
+    return Unit;
+  }
+  function footerModal($receiver) {
+    div_0($receiver, void 0, footerModal$lambda);
   }
   function main(args) {
-    injectHtml('\n' + '         ' + panelHeader() + '\n' + '         ' + panelBody() + '\n' + '//         ' + panelFoorter() + '\n' + '         ' + showDialog() + '\n' + '        ');
+    injectHtml('\n' + '         ' + panelBody());
   }
   function injectHtml(innerHtml, panel) {
     if (panel === void 0)
@@ -119,7 +224,10 @@ this['05-bootstrapDSL'] = function (_, Kotlin, $module$kotlinx_html_js) {
     var tmp$;
     var tmp$_0;
     if ((tmp$ = document.getElementById(panel)) != null) {
+      tmp$.appendChild(panelHeader());
       tmp$.innerHTML = innerHtml;
+      tmp$.appendChild(panelFoorter());
+      tmp$.appendChild(showDialog());
       tmp$_0 = tmp$;
     }
      else
