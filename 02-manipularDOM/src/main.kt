@@ -7,10 +7,10 @@ fun main(args: Array<String>) {
 
     val elements = arrayListOf(
 
-            document.createElement("h1").apply {  textContent = "Manipulando el DOM" }.let { it },
-            document.createElement("h2").apply {  textContent = "desde código" }.let { it },
-            document.createElement("h3").apply {  textContent = "con elementos" }.let { it },
-            document.createElement("h4").apply {  textContent = "diferentes" }.let { it },
+            document.createElement("h1").apply {  textContent = "Manipulando el DOM" },
+            document.createElement("h2").apply {  textContent = "desde código" },
+            document.createElement("h3").apply {  textContent = "con elementos" },
+            document.createElement("h4").apply {  textContent = "diferentes" },
             document.createElement("button")
                     .apply {
                         textContent="    Borrar body html      "
