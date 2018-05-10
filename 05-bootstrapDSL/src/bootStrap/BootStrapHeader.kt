@@ -16,7 +16,7 @@ fun panelHeader() =
             classes = setOf("panel-heading")
             h3 {
                 classes = setOf("panel-title text-center")
-                +"Formulario w/ Kotlin JS"
+                +"Formulario w/ Kotlin JS - vicboma1"
             }
         }
 

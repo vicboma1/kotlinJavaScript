@@ -368,7 +368,7 @@ this['05-bootstrapDSL'] = function (_, Kotlin, $module$kotlinx_html_js) {
   }
   function panelHeader$lambda$lambda($receiver) {
     set_classes($receiver, setOf('panel-title text-center'));
-    $receiver.unaryPlus_pdl1vz$('Formulario w/ Kotlin JS');
+    $receiver.unaryPlus_pdl1vz$('Formulario w/ Kotlin JS - vicboma1');
     return Unit;
   }
   function panelHeader$lambda($receiver) {
