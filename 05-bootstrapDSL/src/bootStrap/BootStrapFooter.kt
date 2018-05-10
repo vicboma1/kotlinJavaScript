@@ -28,7 +28,6 @@ private fun DIV.colButton() {
             attributes["data-target"] = "#Modal"
             +"Enviar"
         }
-        span {  }
         button {
             type = ButtonType.submit
             classes = setOf("btn btn-default btn-sm")

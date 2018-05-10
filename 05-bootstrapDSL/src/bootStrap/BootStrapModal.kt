@@ -48,7 +48,7 @@ private fun DIV.headerModal() {
             attributes["aria-label"] = "Close"
             span {
                 attributes["aria-hidden"] = "true"
-                +"&amp;times"
+                +"x"
             }
         }
     }

@@ -61,21 +61,27 @@ private fun FORM.formGroupEmail() {
             classes = setOf("col-sm-2 control-label")
             htmlFor = "gmail"
             +"Gmail "
+        }
+        div {
+            classes = setOf("col-sm-10")
             div {
-                classes = setOf("col-sm-10")
+                classes = setOf("mb-2")
                 div {
-                    classes = setOf("input-group input-group-sm")
-                    span{
-                        classes = setOf("input-group-addon")
+                    classes = setOf("input-group-prepend")
+                    div {
+                        classes = setOf("input-group-text")
                         +"@"
                     }
                     input {
                         classes = setOf("form-control")
                         type = InputType.text
+                        id = "inlineFormInputGroup"
                     }
                 }
             }
+
         }
+
     }
 }
 
@@ -86,15 +92,16 @@ private fun FORM.formGroupName() {
             classes = setOf("col-sm-2 control-label")
             htmlFor = "name"
             +"Nombre "
-            div {
-                classes = setOf("col-sm-10")
-                input {
-                    classes = setOf("form-control")
-                    type = InputType.email
-                    id = "_email"
-                }
+        }
+        div {
+            classes = setOf("col-sm-10")
+            input {
+                classes = setOf("form-control")
+                type = InputType.email
+                id = "_email"
             }
         }
+
     }
 }
 /*
