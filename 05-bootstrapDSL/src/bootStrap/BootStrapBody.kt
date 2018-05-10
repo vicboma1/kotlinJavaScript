@@ -14,6 +14,25 @@ fun panelBody() =
                 formGroupName()
                 formGroupEmail()
                 formGroupPass()
+                formGroupRePass()
+            }
+        }
+
+private fun FORM.formGroupRePass() =
+        div{
+            classes=setOf("form-group")
+            label {
+                classes=setOf("col-sm-2 control-label")
+                htmlFor="password"
+                +"Confirmar Password"
+            }
+            div {
+                classes=setOf("col-sm-10")
+                input {
+                    type = InputType.password
+                    classes=setOf("form-control")
+                    id="confirmpass"
+                }
             }
         }
 
@@ -79,7 +98,6 @@ private fun FORM.formGroupName() {
     }
 }
 /*
-${formGroupPass()}
 ${formGroupRePass()}
 ${formGroupControlGenre()}
 ${formGroupControlCountry()}

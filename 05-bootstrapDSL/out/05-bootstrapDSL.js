@@ -13,12 +13,12 @@ this['05-bootstrapDSL'] = function (_, Kotlin, $module$kotlinx_html_js) {
   var Unit = Kotlin.kotlin.Unit;
   var form = $module$kotlinx_html_js.kotlinx.html.form_3vb3wm$;
   var div = $module$kotlinx_html_js.kotlinx.html.js.div_wkomt5$;
-  var span = $module$kotlinx_html_js.kotlinx.html.span_6djfml$;
+  var label = $module$kotlinx_html_js.kotlinx.html.label_yd75js$;
   var InputType = $module$kotlinx_html_js.kotlinx.html.InputType;
+  var set_id = $module$kotlinx_html_js.kotlinx.html.set_id_ueiko3$;
   var input = $module$kotlinx_html_js.kotlinx.html.input_e1g74z$;
   var div_0 = $module$kotlinx_html_js.kotlinx.html.div_ri36nr$;
-  var label = $module$kotlinx_html_js.kotlinx.html.label_yd75js$;
-  var set_id = $module$kotlinx_html_js.kotlinx.html.set_id_ueiko3$;
+  var span = $module$kotlinx_html_js.kotlinx.html.span_6djfml$;
   var set_style = $module$kotlinx_html_js.kotlinx.html.set_style_ueiko3$;
   var div_1 = $module$kotlinx_html_js.kotlinx.html.div_59el9d$;
   var ButtonType = $module$kotlinx_html_js.kotlinx.html.ButtonType;
@@ -30,6 +30,8 @@ this['05-bootstrapDSL'] = function (_, Kotlin, $module$kotlinx_html_js) {
     set_role($receiver, 'form');
     formGroupName($receiver);
     formGroupEmail($receiver);
+    formGroupPass($receiver);
+    formGroupRePass($receiver);
     return Unit;
   }
   function panelBody$lambda($receiver) {
@@ -39,6 +41,58 @@ this['05-bootstrapDSL'] = function (_, Kotlin, $module$kotlinx_html_js) {
   }
   function panelBody() {
     return div(get_create(document), void 0, panelBody$lambda);
+  }
+  function formGroupRePass$lambda$lambda($receiver) {
+    set_classes($receiver, setOf('col-sm-2 control-label'));
+    $receiver.htmlFor = 'password';
+    $receiver.unaryPlus_pdl1vz$('Confirmar Password');
+    return Unit;
+  }
+  function formGroupRePass$lambda$lambda$lambda($receiver) {
+    $receiver.type = InputType.password;
+    set_classes($receiver, setOf('form-control'));
+    set_id($receiver, 'confirmpass');
+    return Unit;
+  }
+  function formGroupRePass$lambda$lambda_0($receiver) {
+    set_classes($receiver, setOf('col-sm-10'));
+    input($receiver, void 0, void 0, void 0, void 0, void 0, formGroupRePass$lambda$lambda$lambda);
+    return Unit;
+  }
+  function formGroupRePass$lambda($receiver) {
+    set_classes($receiver, setOf('form-group'));
+    label($receiver, void 0, formGroupRePass$lambda$lambda);
+    div_0($receiver, void 0, formGroupRePass$lambda$lambda_0);
+    return Unit;
+  }
+  function formGroupRePass($receiver) {
+    div_0($receiver, void 0, formGroupRePass$lambda);
+  }
+  function formGroupPass$lambda$lambda($receiver) {
+    set_classes($receiver, setOf('col-sm-2 control-label'));
+    $receiver.htmlFor = 'password';
+    $receiver.unaryPlus_pdl1vz$('Password');
+    return Unit;
+  }
+  function formGroupPass$lambda$lambda$lambda($receiver) {
+    $receiver.type = InputType.password;
+    set_classes($receiver, setOf('form-control'));
+    set_id($receiver, 'pass');
+    return Unit;
+  }
+  function formGroupPass$lambda$lambda_0($receiver) {
+    set_classes($receiver, setOf('col-sm-10'));
+    input($receiver, void 0, void 0, void 0, void 0, void 0, formGroupPass$lambda$lambda$lambda);
+    return Unit;
+  }
+  function formGroupPass$lambda($receiver) {
+    set_classes($receiver, setOf('form-group'));
+    label($receiver, void 0, formGroupPass$lambda$lambda);
+    div_0($receiver, void 0, formGroupPass$lambda$lambda_0);
+    return Unit;
+  }
+  function formGroupPass($receiver) {
+    div_0($receiver, void 0, formGroupPass$lambda);
   }
   function formGroupEmail$lambda$lambda$lambda$lambda$lambda($receiver) {
     set_classes($receiver, setOf('input-group-addon'));
@@ -114,11 +168,8 @@ this['05-bootstrapDSL'] = function (_, Kotlin, $module$kotlinx_html_js) {
   function formGroupControlGenre() {
     return '\n             <div class="form-group">\n                <label class="col-sm-2 control-label">G\xE9nero<\/label>\n                <div class="col-sm-10">\n                    <div class="radio-inline">\n                        <label> <input id="radiobutton1" name="sampleradiobutton" value="" type="radio">Masculino<\/label>\n                    <\/div>\n                    <div class="radio-inline">\n                        <label> <input id="radiobutton2" name="sampleradiobutton" value="" type="radio">Femenino<\/label>\n                    <\/div>\n                <\/div>\n            <\/div>\n        ';
   }
-  function formGroupRePass() {
+  function formGroupRePass_0() {
     return '\n            <div class="form-group">\n                <label htmlfor="password" class="col-sm-2 control-label">Confirmar password<\/label>\n                <div class="col-sm-10">\n                    <input type="password" class="form-control" id="confirmpass">\n                <\/div>\n            <\/div>\n        ';
-  }
-  function formGroupPass() {
-    return '\n            <div class="form-group">\n            <label htmlfor="password" class="col-sm-2 control-label">Password<\/label>\n            <div class="col-sm-10">\n                <input type="password" class="form-control" id="pass">\n            <\/div>\n            <\/div>\n        ';
   }
   function panelFoorter$lambda($receiver) {
     set_classes($receiver, setOf('panel-footer'));
