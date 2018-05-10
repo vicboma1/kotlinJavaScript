@@ -13,6 +13,25 @@ fun panelBody() =
                 role="form"
                 formGroupName()
                 formGroupEmail()
+                formGroupPass()
+            }
+        }
+
+private fun FORM.formGroupPass() =
+        div{
+            classes=setOf("form-group")
+            label {
+                classes=setOf("col-sm-2 control-label")
+                htmlFor="password"
+                +"Password"
+            }
+            div {
+                classes=setOf("col-sm-10")
+                input {
+                    type = InputType.password
+                    classes=setOf("form-control")
+                    id="pass"
+                }
             }
         }
 
@@ -130,15 +149,7 @@ private fun formControlLegal() =
             </div>
         """
 
-            private fun formGroupPass() =
-                    """
-            <div class="form-group">
-            <label htmlfor="password" class="col-sm-2 control-label">Password</label>
-            <div class="col-sm-10">
-                <input type="password" class="form-control" id="pass">
-            </div>
-            </div>
-        """
+
 
 
 
