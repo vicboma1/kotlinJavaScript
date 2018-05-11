@@ -30,6 +30,6 @@
 
 ![hw](https://raw.githubusercontent.com/vicboma1/kotlinJavaScript/master/assets/_04.gif)
 
-#### [Formulario Bootstrap - Builder DSL](https://github.com/vicboma1/kotlinJavaScript/tree/master/05-bootstrapDSL)
+#### [Formulario Bootstrap + Popper - Builder DSL](https://github.com/vicboma1/kotlinJavaScript/tree/master/05-bootstrapDSL)
 
 ![hw](https://raw.githubusercontent.com/vicboma1/kotlinJavaScript/master/assets/05.png)
