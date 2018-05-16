@@ -1,4 +1,4 @@
-# kotlin JavaScript
+# kotlin JavaScript - Examples
 
 --->>>  [Repo: Kotlin Koans](https://github.com/vicboma1/Kotlin-koans)   <<<---
 
