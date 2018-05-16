@@ -1,4 +1,4 @@
-# kotlin JavaScript | UPV 2018 (WIP)
+# kotlin JavaScript
 
 --->>>  [Repo: Kotlin Koans](https://github.com/vicboma1/Kotlin-koans)   <<<---
 
